@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/HealthBarUi.uss?fileID=7433441132597879392&amp;guid=5418fb8c7b6ea4940affa79809a85407&amp;type=3#HealthBarUi"/>
+    <ui:VisualElement name="health-container">
+        <ui:VisualElement name="health-bg" style="background-image: url(&quot;project://database/Assets/Sprites/BarraVida/BarraVida1.png?fileID=2800000&amp;guid=e2bc0c1f82518cb41a0d290933b1f17f&amp;type=3#BarraVida1&quot;); -unity-background-scale-mode: scale-to-fit; -unity-slice-type: sliced;"/>
+        <ui:VisualElement name="health-fill" style="background-image: url(&quot;project://database/Assets/Sprites/BarraVida/BarraVida2.png?fileID=2800000&amp;guid=75c2a2a81b1ea314cab8f2a39ad85925&amp;type=3#BarraVida2&quot;); position: absolute; left: auto;"/>
+        <ui:VisualElement name="health-icon" style="background-image: url(&quot;project://database/Assets/Sprites/BarraVida/CuboVida.png?fileID=2800000&amp;guid=56578a938233b3a4380dfcffef8e7bad&amp;type=3#CuboVida&quot;); height: 70px; top: 1px; width: 98px; right: 226px;"/>
+    </ui:VisualElement>
+</ui:UXML>

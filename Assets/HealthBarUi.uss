@@ -1,0 +1,36 @@
+#health-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    height: 80px;
+}
+
+#health-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/Sprites/BarraVida/BarraVida1.png?fileID=2800000&guid=e2bc0c1f82518cb41a0d290933b1f17f&type=3#BarraVida1");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#health-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/Sprites/BarraVida/BarraVida2.png?fileID=2800000&guid=75c2a2a81b1ea314cab8f2a39ad85925&type=3#BarraVida2");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#health-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -20px;
+    top: 20px;
+    background-image: url("project://database/Assets/Sprites/BarraVida/CuboVida.png?fileID=2800000&guid=56578a938233b3a4380dfcffef8e7bad&type=3#CuboVida");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

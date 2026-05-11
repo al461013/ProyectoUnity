@@ -3,11 +3,13 @@ using UnityEngine.InputSystem;
 
 public class BoatMovement : MonoBehaviour
 {
+    public static BoatMovement Instance;
     private Rigidbody2D rb;
 
     private PlayerInputActions controls;
 
     private float moveInput;
+    private bool allowMovement = true;
 
     [SerializeField]
     private float speed = 5f;
@@ -23,6 +25,10 @@ public class BoatMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;    
+        }
         rb = GetComponent<Rigidbody2D>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -31,7 +37,7 @@ public class BoatMovement : MonoBehaviour
 
         controls.Player.Move.performed += ctx =>
         {
-            moveInput = ctx.ReadValue<float>();
+            if (allowMovement) { moveInput = ctx.ReadValue<float>(); }
         };
 
         controls.Player.Move.canceled += ctx =>
@@ -71,5 +77,15 @@ public class BoatMovement : MonoBehaviour
 
             transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f);
         }
+    }
+    public void ActivateMovement()
+    {
+        CameraFollow.seguimientoBarco = true;
+        allowMovement = true;
+    }
+    public void DesactivateMovement()
+    {
+        CameraFollow.seguimientoBarco = false; 
+        allowMovement = false;
     }
 }
